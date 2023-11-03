@@ -1,8 +1,8 @@
-const fs      = require('fs');
-const http    = require('http');
-const url     = require('url');
-const {getProductWithSlug} = require('./utils/helper');
-const replaceTemplate      = require('./utils/replace-template');
+import fs from 'fs';
+import url from 'url';
+import http from 'http';
+import { getProductWithSlug } from './utils/helper';
+import replaceTemplate from './utils/replace-template';
 
 //Html template
 const overView     = fs.readFileSync(`${__dirname}/templates/overview.html`,'utf-8');
@@ -47,5 +47,5 @@ const server = http.createServer((req, res)=>{
 
 //Listen Server at localhost:8000
 server.listen(8000, '127.0.0.1', ()=>{
-    console.log('Listening on port 8000');
+    console.log(`Listening at http://127.0.0.1:8000`);
 })
