@@ -5,12 +5,18 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon index"
+    "dev": "nodemon --exec babel-node index"
   },
   "author": "Ling Myat Aung",
   "license": "ISC",
   "dependencies": {
     "nodemon": "^3.0.1",
     "slugify": "^1.6.6"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.23.0",
+    "@babel/core": "^7.23.2",
+    "@babel/node": "^7.22.19",
+    "@babel/preset-env": "^7.23.2"
   }
 }
